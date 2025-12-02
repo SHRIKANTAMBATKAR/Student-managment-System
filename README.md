@@ -1,2 +1,2 @@
-# Student-managment-System
+# Student-managments-System
 this is my projects 
