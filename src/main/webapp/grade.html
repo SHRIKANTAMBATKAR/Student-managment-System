@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grades - Student Management System</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="grades.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="admin_dashboard.html">
+            SMS Admin
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="admin_dashboard.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="register_student.html">Add Student</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="ViewStudentsServlet">View Students</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="AttendanceServlet">Attendance</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="GradesServlet">Grades</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="btn btn-danger ms-3" href="LogoutServlet">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- PAGE WRAPPER -->
+<div class="grades-page">
+
+    <!-- HEADER + FILTERS -->
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-between mb-4">
+            <div>
+                <h2 class="page-title mb-1">Grades</h2>
+                <p class="page-subtitle mb-0">View and manage student marks</p>
+            </div>
+
+            <div class="filters-wrapper mt-3 mt-md-0">
+                <select class="form-select filter-select">
+                    <option selected>All Branches</option>
+                    <option>CSE</option>
+                    <option>IT</option>
+                    <option>ECE</option>
+                    <option>ME</option>
+                </select>
+
+                <select class="form-select filter-select">
+                    <option selected>All Years</option>
+                    <option>1st Year</option>
+                    <option>2nd Year</option>
+                    <option>3rd Year</option>
+                    <option>4th Year</option>
+                </select>
+
+                <select class="form-select filter-select">
+                    <option selected>All Subjects</option>
+                    <option>DBMS</option>
+                    <option>OOP</option>
+                    <option>DSA</option>
+                    <option>OS</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- SUMMARY CARDS -->
+        <div class="row g-3 mb-4">
+            <div class="col-md-4">
+                <div class="summary-card">
+                    <span class="summary-label">Average Marks</span>
+                    <h3 class="summary-value">78.4</h3>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="summary-card">
+                    <span class="summary-label">Highest Score</span>
+                    <h3 class="summary-value">98</h3>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="summary-card">
+                    <span class="summary-label">Students Passed</span>
+                    <h3 class="summary-value">42 / 50</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- TABLE WRAPPER -->
+        <div class="grades-card">
+            <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+                <h5 class="mb-0">Student Grades</h5>
+                <button class="btn btn-primary btn-sm">
+                    + Add Marks
+                </button>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table align-middle grades-table">
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Name</th>
+                            <th>Branch</th>
+                            <th>Year</th>
+                            <th>Subject</th>
+                            <th>Marks</th>
+                            <th>Grade</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <!-- Replace these sample rows with dynamic data from servlet or JSP loop -->
+
+                        <tr>
+                            <td>1</td>
+                            <td>Rahul Sharma</td>
+                            <td>CSE</td>
+                            <td>3rd</td>
+                            <td>DBMS</td>
+                            <td>82</td>
+                            <td><span class="badge bg-success">A</span></td>
+                            <td>
+                                <button class="btn btn-outline-primary btn-sm">Edit</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Priya Patel</td>
+                            <td>IT</td>
+                            <td>2nd</td>
+                            <td>OOP</td>
+                            <td>65</td>
+                            <td><span class="badge bg-info text-dark">B</span></td>
+                            <td>
+                                <button class="btn btn-outline-primary btn-sm">Edit</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>Amit Verma</td>
+                            <td>CSE</td>
+                            <td>4th</td>
+                            <td>DSA</td>
+                            <td>49</td>
+                            <td><span class="badge bg-danger">F</span></td>
+                            <td>
+                                <button class="btn btn-outline-primary btn-sm">Edit</button>
+                            </td>
+                        </tr>
+
+                        <!-- End sample rows -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

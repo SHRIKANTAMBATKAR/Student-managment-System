@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Student Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="admin.css">
+    
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3><i class="fas fa-graduation-cap me-2"></i>EduManage</h3>
+            <p>Student Management System</p>
+        </div>
+        
+        <ul class="nav flex-column mt-4">
+            <li class="nav-item">
+                <a class="nav-link active" href="admin_dashboard.html">
+                    <i class="fas fa-home"></i> Dashboard
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="register_student.html">
+                    <i class="fas fa-user-plus"></i> Add Student
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="ViewStudentsServlet">
+                    <i class="fas fa-users"></i> View Students
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="AttendanceServlet">
+                    <i class="fas fa-calendar-check"></i> Attendance
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Gradeservlet"class="nav-link" href="GradesServlet">
+                    <i class="fas fa-chart-bar"></i> Grades
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-cog"></i> Settings
+                </a>
+            </li>
+        </ul>
+        
+        <a href="LogoutServlet" class="btn btn-outline-light logout-btn">
+            <i class="fas fa-sign-out-alt me-2"></i> Logout
+        </a>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>Admin Dashboard</h1>
+                <p class="text-muted mb-0">Welcome back, Admin! Here's what's happening today.</p>
+            </div>
+            
+            <div class="user-info">
+                <div class="user-avatar">AD</div>
+                <div>
+                    <div class="fw-bold">Admin User</div>
+                    <div class="text-muted small">Administrator</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Stats Section -->
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="stats-card students">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <div class="stats-value">40</div>
+                            <div class="stats-label">Total Students</div>
+                        </div>
+                        <div class="stats-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="stats-card attendance">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <div class="stats-value">94%</div>
+                            <div class="stats-label">Today's Attendance</div>
+                        </div>
+                        <div class="stats-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="stats-card grades">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <div class="stats-value">86%</div>
+                            <div class="stats-label">Avg. Grade</div>
+                        </div>
+                        <div class="stats-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="stats-card activities">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <div class="stats-value">24</div>
+                            <div class="stats-label">Pending Tasks</div>
+                        </div>
+                        <div class="stats-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Dashboard Cards -->
+        <div class="row dashboard-container g-4 mb-5">
+            <div class="col-md-3">
+                <div class="card dashboard-card p-4">
+                    <div class="card-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h5 class="card-title">Add New Student</h5>
+                    <p class="card-text">Register a new student in the system with full details and enrollment information.</p>
+                    <a href="register_student.html" class="btn card-btn text-white">Add Student</a>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="card dashboard-card p-4">
+                    <div class="card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h5 class="card-title">View Students</h5>
+                    <p class="card-text">Browse, search, and manage all student records. Edit details or view profiles.</p>
+                    <a href="ViewStudentsServlet" class="btn card-btn text-white">View Students</a>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="card dashboard-card p-4">
+                    <div class="card-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h5 class="card-title">Attendance</h5>
+                    <p class="card-text">Mark attendance, view reports, and manage attendance records for all students.</p>
+                    <a href="AttendanceServlet" class="btn card-btn text-white">Manage Attendance</a>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="card dashboard-card p-4">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h5 class="card-title">Grades</h5>
+                    <p class="card-text">Enter student grades, generate report cards, and analyze academic performance.</p>
+                    <a href="GradesServlet" class="btn card-btn text-white">Manage Grades</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Recent Activity & Quick Actions -->
+        
+            <div class="col-lg-4 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-white border-0 py-3">
+                        <h5 class="mb-0"><i class="fas fa-bolt text-warning me-2"></i> Quick Actions</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-grid gap-2">
+                            <a href="register_student.html" class="btn btn-primary btn-lg">
+                                <i class="fas fa-user-plus me-2"></i> Add New Student
+                            </a>
+                            <a href="#" class="btn btn-success btn-lg">
+                                <i class="fas fa-file-export me-2"></i> Generate Report
+                            </a>
+                            <a href="#" class="btn btn-info btn-lg">
+                                <i class="fas fa-envelope me-2"></i> Send Notifications
+                            </a>
+                            <a href="#" class="btn btn-warning btn-lg">
+                                <i class="fas fa-cog me-2"></i> System Settings
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="copyright">
+            <p>© 2023 Student Management System. All rights reserved. | Version 2.1.0</p>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Toggle sidebar on mobile
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.toggle('active');
+        });
+        
+        // Close sidebar when clicking outside on mobile
+        document.getElementById('mainContent').addEventListener('click', function() {
+            if (window.innerWidth <= 992) {
+                document.getElementById('sidebar').classList.remove('active');
+            }
+        });
+        
+        // Simulate loading data
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate stats cards on load
+            const statsCards = document.querySelectorAll('.stats-card');
+            statsCards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    
+                    setTimeout(() => {
+                        card.style.transition = 'all 0.5s ease';
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 100);
+                }, index * 100);
+            });
+            
+            // Animate dashboard cards
+            const dashboardCards = document.querySelectorAll('.dashboard-card');
+            dashboardCards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(30px)';
+                    
+                    setTimeout(() => {
+                        card.style.transition = 'all 0.6s ease';
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 200);
+                }, index * 150);
+            });
+        });
+    </script>
+</body>
+</html>
