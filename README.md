@@ -1,85 +1,72 @@
 # Student-managment-System
-A simple and efficient web application designed to manage student records, attendance, grades, and administrative tasks. Built using Java, JSP, Servlets, and MySQL, this project demonstrates core concepts of web development, database connectivity, and MVC architecture.
+A clean and efficient web application designed to manage student records, attendance, grades, and administrative tasks.
+Built using Java, JSP, Servlets, JDBC, Bootstrap, and MySQL, this project demonstrates practical skills in full-stack web development and MVC architecture.
 
+<div align="center">
+🛠️ Tech Stack
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
 🚀 Features
 👤 Student Management
 
 Add new students
 
-Update student information
+Edit student information
 
 Delete students
 
 View all registered students
 
-Profile-style table with clean UI
+Clean, responsive data table
 
 📝 Attendance Management
 
-Mark attendance for all students
+Mark attendance (Present / Absent)
 
-View latest attendance records
+Display last recorded attendance
 
-Present/Absent status badges
+Status badges
 
-Auto-date capture using CURDATE()
+Auto-date entry using CURDATE()
 
 🎓 Grades Management
 
-Add subject-wise marks
+Insert subject-wise marks
 
-View grade list
+View grades list
 
-Auto grade calculation (A+, A, B, C, D, F)
+Auto Grade Calculation (A+, A, B, C, D, F)
 
-Clean and responsive grade dashboard
+Beautiful grade dashboard UI
 
 🔐 Authentication System
 
-Secure login for Admin
+Secure admin login
 
-Role-based page access
+Session-based validation
 
-Sessions to protect unauthorized pages
+Role-based access
 
 🖥️ Admin Dashboard
 
-Bootstrap-based modern responsive UI
+Modern responsive UI
 
-Quick action cards
+Bootstrap cards
 
 Navigation bar for all modules
 
-🛠️ Technologies Used
-Backend
-
-Java
-
-JSP
-
-Servlets
-
-JDBC
-
-Database
-
-MySQL
-
-SQL Queries
-
-Foreign key constraints
-
-Frontend
-
-HTML
-
-CSS
-
-Bootstrap 5
-
-Server
-
-Apache Tomcat
+Easy access to Students, Attendance, Grades
 
 📂 Project Structure
 StudentManagementSystem/
@@ -102,7 +89,7 @@ StudentManagementSystem/
 │   ├── attendance_form.html
 │   ├── grades.html
 │   ├── style.css
-│   └── images/
+│   └── screenshots/
 │
 └── README.md
 
@@ -130,21 +117,22 @@ student_id	INT (FK)
 subject	VARCHAR
 marks	INT
 ▶️ How to Run the Project
-Step 1: Clone the repository
+Step 1: Clone the Repository
 git clone https://github.com/SHRIKANTAMBATKAR/Student-managment-System.git
 
 Step 2: Import into IDE
 
-Use Eclipse, IntelliJ.
+Open Eclipse / IntelliJ
 
-Select Import as Dynamic Web Project
+Import as Dynamic Web Project
 
 Step 3: Configure Database
-
-Create MySQL database
-
 CREATE DATABASE student_management;
 
+
+Import tables
+
+Update DBConnect.java with your MySQL credentials
 
 Import tables using your schema
 
