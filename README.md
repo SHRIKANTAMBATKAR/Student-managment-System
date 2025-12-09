@@ -161,8 +161,8 @@ http://localhost:8080/StudentManagementSystem/
 📸 Screenshots (Add your images)
 
 You can upload screenshots inside a folder and link them:
-![Login and registration ](![IMG_20251210_001423](https://github.com/user-attachments/assets/97d4ec02-341d-4d99-b1a3-abf1c186cf1f)
-)
+!(![Login and Registration](https://github.com/user-attachments/assets/97d4ec02-341d-4d99-b1a3-abf1c186cf1f)
+
 ![Admin Dashbord and StudentDashbord](https://github.com/user-attachments/assets/d03625a0-311d-48a8-8967-19a6c717d9e5)
 
 <img width="800" height="487" alt="Screenshot 2025-12-09 221057" src="https://github.com/user-attachments/assets/2bf91baa-7334-4803-a52e-211a0d5d567e" />
