@@ -2,120 +2,66 @@
 A clean and efficient web application designed to manage student records, attendance, grades, and administrative tasks.
 Built using Java, JSP, Servlets, JDBC, Bootstrap, and MySQL, this project demonstrates practical skills in full-stack web development and MVC architecture.
 
-<div align="center">
 🛠️ Tech Stack
-
-
-
-
-
-
-
-
-
-
-
-
+Category	             Technology Used
+Programming Language	  Java (JDK 17+)
+Frontend	              HTML, CSS, Bootstrap 5
+Backend	                JSP, Servlets, JDBC
+Database	              MySQL
+Server	                Apache Tomcat 10
+Version Control	         Git & GitHub
 </div>
 🚀 Features
 👤 Student Management
 
-Add new students
+  Add new students
 
-Edit student information
+  Edit student information
 
-Delete students
+  Delete students
 
-View all registered students
+  View all registered students
 
-Clean, responsive data table
+  Clean, responsive data table
 
 📝 Attendance Management
 
-Mark attendance (Present / Absent)
+  Mark attendance (Present / Absent)
 
-Display last recorded attendance
+  Display last recorded attendance
 
-Status badges
+  Status badges
 
-Auto-date entry using CURDATE()
+  Auto-date entry using CURDATE()
 
 🎓 Grades Management
 
-Insert subject-wise marks
+  Insert subject-wise marks
 
-View grades list
+  View grades list
 
-Auto Grade Calculation (A+, A, B, C, D, F)
+  Auto Grade Calculation (A+, A, B, C, D, F)
 
-Beautiful grade dashboard UI
+  Beautiful grade dashboard UI
 
 🔐 Authentication System
 
-Secure admin login
+  Secure admin login
 
-Session-based validation
+  Session-based validation
 
-Role-based access
+  Role-based access
 
 🖥️ Admin Dashboard
 
-Modern responsive UI
+  Modern responsive UI
 
-Bootstrap cards
+  Bootstrap cards
 
-Navigation bar for all modules
+  Navigation bar for all modules
 
-Easy access to Students, Attendance, Grades
+  Easy access to Students, Attendance, Grades
 
-📂 Project Structure
-StudentManagementSystem/
-│
-├── src/
-│   └── shrikant/
-│       ├── LoginServlet.java
-│       ├── ViewStudentsServlet.java
-│       ├── AttendanceServlet.java
-│       ├── SaveAttendanceServlet.java
-│       ├── GradesServlet.java
-│       ├── DeleteStudentServlet.java
-│       ├── UpdateProfileServlet.java
-│       └── DBConnect.java
-│
-├── WebContent/ or webapp/
-│   ├── index.html
-│   ├── admin_dashboard.html
-│   ├── register_student.html
-│   ├── attendance_form.html
-│   ├── grades.html
-│   ├── style.css
-│   └── screenshots/
-│
-└── README.md
-
-🗄️ Database Schema
-1. students table
-Column	Type
-id	INT (PK)
-name	VARCHAR
-email	VARCHAR
-phone	VARCHAR
-password	VARCHAR
-branch	VARCHAR
-year	INT
-profile_pic	VARCHAR
-2. attendance table
-Column	Type
-id	INT (PK)
-student_id	INT (FK)
-date	DATE
-status	VARCHAR
-3. grades table
-Column	Type
-id	INT (PK)
-student_id	INT (FK)
-subject	VARCHAR
-marks	INT
 ▶️ How to Run the Project
 Step 1: Clone the Repository
 git clone https://github.com/SHRIKANTAMBATKAR/Student-managment-System.git
